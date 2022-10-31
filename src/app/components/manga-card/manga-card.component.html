@@ -20,3 +20,10 @@
     </div>
   </button>
 </div>
+
+<div>
+  <div *ngFor="let oneData of manga.data">
+    <p>{{oneData.data.title}}</p>
+    <img [src]="oneData.image">
+  </div>
+</div>
