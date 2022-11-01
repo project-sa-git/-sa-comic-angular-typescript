@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { MangaCardComponent } from './components/manga-card/manga-card.component';
 import { MangaCardDetailComponent } from './components/manga-card-detail/manga-card-detail.component';
 import { PageNotFoundComponent } from './error/page-not-found/page-not-found.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -14,11 +15,12 @@ import { PageNotFoundComponent } from './error/page-not-found/page-not-found.com
     HeaderComponent,
     MangaCardComponent,
     MangaCardDetailComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
