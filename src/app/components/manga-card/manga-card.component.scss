@@ -1,15 +1,12 @@
-p {
-  background-color: #a9ceec;
+.category h1 {
+    background-color: pink;
+    padding-bottom: 30px;
+    margin-bottom: 0;
 }
 
 .btn-wrapper {
   box-sizing: border-box;
   display: flex;
-
-  // grid-template-columns: repeat(3, minmax(0px, 1fr));
-
-  gap: 0px;
-
 }
 
 .btn {
@@ -44,4 +41,10 @@ cursor: pointer;
 
 .icon {
   margin-right: 10px;
+}
+
+.manga-content {
+  display: flex;
+  height: 200px;
+  width: 200px;
 }
