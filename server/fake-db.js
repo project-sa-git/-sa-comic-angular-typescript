@@ -105,4 +105,8 @@ class FakeDB {
       }
     )
   }
+
+  seeDb() {
+    this.pushMangaToDb()
+  }
 }
