@@ -1,6 +1,6 @@
 const Manga = require('./model/manga')
 
-class FakeDB {
+class FakeDb {
   constructor() {
     this.manga = [
       {
@@ -110,3 +110,5 @@ class FakeDB {
     this.pushMangaToDb()
   }
 }
+
+module.exports = FakeDb

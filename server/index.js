@@ -1,12 +1,18 @@
 const express = require('express')
 const mongoose = require('mongoose');
 const config = require('./config/dev')
+const FakeDb = require('./fake-db')
 
 mongoose.connect(config.DB_URI)
+.then(
+  () => {
+    const fakeDb = new FakeDb()
+    fakeDb.seeDb()
+  }
+)
 
 const app = express()
 const PORT = process.env.POST || '3001' // herokuでは左、ローカルでは3001ポート
-
 app.listen(PORT, function() {
   console.log('express　らんにんぐ');
 })
@@ -22,8 +28,3 @@ app.get('/manga-card-detail', function(req,res) {
 app.get('/', function(req,res) {
   console.log('ルートさくせす👍');
 })
-
-// mongodb+srv://test:<password>@cluster0.zbuq8nj.mongodb.net/?retryWrites=true&w=majority
-
-
-
