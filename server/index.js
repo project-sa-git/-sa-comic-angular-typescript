@@ -7,7 +7,7 @@ mongoose.connect(config.DB_URI)
 .then(
   () => {
     const fakeDb = new FakeDb()
-    fakeDb.seeDb()
+    fakeDb.initDb()
   }
 )
 

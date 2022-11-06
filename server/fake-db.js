@@ -97,6 +97,16 @@ class FakeDb {
     ]
   }
 
+  async initDb() {
+    await this.cleanDb()
+    this.pushMangaToDb()
+  }
+
+  async cleanDb() {   // async -> await を使う場合に使用
+    // awaitでdeleteMany(最初にDBを削除するまで)が終わるまでは他が実行されないようにする
+    await Manga.deleteMany({})
+  }
+
   pushMangaToDb() {
     this.manga.forEach(
       (manga) => {
@@ -106,9 +116,9 @@ class FakeDb {
     )
   }
 
-  seeDb() {
-    this.pushMangaToDb()
-  }
+  // seeDb() {
+  //   this.pushMangaToDb()
+  // }
 }
 
 module.exports = FakeDb
