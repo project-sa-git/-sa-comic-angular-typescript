@@ -1,1 +1,6 @@
 <p>manga-card-detail works!</p>
+
+<div class="manga-content" *ngFor="let oneData of manga.data">
+  <p>{{oneData.data.title}}</p>
+  <img [src]="oneData.image">
+</div>
